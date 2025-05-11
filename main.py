@@ -11,8 +11,8 @@ torch.classes.__path__ = [os.path.join(torch.__path__[0], torch.classes.__file__
 # torch.classes.__path__ = []
 
 
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+plt = platform.system()
+if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
 
 
 # title
